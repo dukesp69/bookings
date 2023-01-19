@@ -1,0 +1,81 @@
+{{template "base" .}}
+
+{{define "content"}}
+<div class="container">
+    <div class="row">
+        <div class="col" >
+            <img src="/static/images/marjors-suite.png" class="img-fluid img-thumbnail mx-auto d-block room-image" alt="generals quarters">
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center mt-4">Major's Suite</h1>
+            <p>
+                Your home away from home, set on the majestic waters of the Atlantic Ocean, this will be a vacation to remember.
+                Your home away from home, set on the majestic waters of the Atlantic Ocean, this will be a vacation to remember.
+                Your home away from home, set on the majestic waters of the Atlantic Ocean, this will be a vacation to remember.
+                Your home away from home, set on the majestic waters of the Atlantic Ocean, this will be a vacation to remember.
+                Your home away from home, set on the majestic waters of the Atlantic Ocean, this will be a vacation to remember.
+                Your home away from home, set on the majestic waters of the Atlantic Ocean, this will be a vacation to remember.
+            </p>
+
+        </div>
+     </div>
+     <div class="row">
+        <div class="col text-center">
+            <a href="#!" id="check-availability-button" class="btn btn-success">Check Availability</a>
+        </div>
+     </div>
+     
+
+</div>
+{{end}}
+
+{{define "js"}}
+
+<script>
+     (() => {
+      'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+          form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+      })()
+      document.getElementById("check-availability-button").addEventListener("click", function () {
+        //notify("this is my message", "success")
+        //notifyModal("title", "<em>Hello,world</em>", "success", "My Text for the button")
+        //attention.toast({msg: "Hello,world!", icon: "error"})
+        //attention.success({msg: "Hello,world!", icon: "error"})
+        let html = `
+        <form id="check-availability-form" action="" method="POST" novalidate class="needs-validation">
+          <div class="form-row overflow-hidden">
+            <div class="col">
+              <div class="row" id="reservation-dates-modal">
+                <div class="col ">
+                  <input disabled required class="form-control" type="text" name="start" id="start" placeholder="Arrival">
+                </div>
+                <div class="col">
+                  <input disabled required class="form-control" type="text" name="end" id="end" placeholder="Departure">
+                </div>
+              </div>
+            </div>
+          </div>
+        </from>
+        `
+
+        attention.custom({msg: html, title:"Choose your dates"})
+      })
+</script>
+{{end}}

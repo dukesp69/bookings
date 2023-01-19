@@ -1,0 +1,22 @@
+mode: set
+github.com/dukesp69/bookings/internal/handlers/handlers.go:24.47,28.2 1 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:31.33,33.2 1 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:36.67,41.2 3 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:44.68,55.2 5 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:58.74,66.2 4 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:69.78,71.16 2 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:75.2,90.19 6 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:101.2,103.66 2 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:71.16,74.3 2 0
+github.com/dukesp69/bookings/internal/handlers/handlers.go:90.19,99.3 4 0
+github.com/dukesp69/bookings/internal/handlers/handlers.go:107.71,109.2 1 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:112.69,114.2 1 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:117.75,119.2 1 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:122.79,127.2 3 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:135.79,142.16 3 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:145.2,146.14 2 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:142.16,144.3 1 0
+github.com/dukesp69/bookings/internal/handlers/handlers.go:150.70,152.2 1 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:155.81,157.9 2 1
+github.com/dukesp69/bookings/internal/handlers/handlers.go:163.2,168.4 4 0
+github.com/dukesp69/bookings/internal/handlers/handlers.go:157.9,162.3 4 1
