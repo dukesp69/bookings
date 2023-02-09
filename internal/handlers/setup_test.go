@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"testing"
 	"time"
 
 	"github.com/alexedwards/scs/v2"
@@ -24,10 +25,10 @@ var session *scs.SessionManager
 var pathToTemplates = "./../../templates"
 var functions = template.FuncMap{}
 
-func getRoutes() http.Handler {
+func TestMain(m *testing.M) {
+	gob.Register(models.Reservation{})
 	//what am I going to put in the session
 	app.InProduction = false
-	gob.Register(models.Reservation{})
 
 	infoLog := log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
 	app.InfoLog = infoLog
@@ -50,9 +51,13 @@ func getRoutes() http.Handler {
 	}
 	app.TemplateCache = tc
 	app.UseCache = true
-	repo := NewRepo(&app)
+	repo := NewTestRepo(&app)
 	NewHandlers(repo)
-	render.NewTemplates(&app)
+	render.NewRenderer(&app)
+	os.Exit(m.Run())
+}
+
+func getRoutes() http.Handler {
 
 	mux := chi.NewRouter()
 
